@@ -11,7 +11,7 @@ $(document).ready(function(){
     $(".categoryButton").on("click",function(){
 
        //empty the gif div
-        $("#gif").empty();
+        $("#gifs").empty();
 
        //create and send an AJAX request based on the value of the button
         $.ajax({
@@ -49,7 +49,7 @@ $(document).ready(function(){
                 newImage.attr("data-state","still");
 
                 //gives the image a class
-                newImage.attr("class","categoryImage");
+                newImage.addClass("categoryImage");
 
                 //appends rating to newDiv
                 newDiv.append(rating);
@@ -64,7 +64,7 @@ $(document).ready(function(){
     });
 
     //when the create button is clicked
-    $("#addButton").on("click", function(event){
+    $(".addButton").on("click", function(event){
 
         //override existing default conditions for the input button
         event.preventDefault();
@@ -99,6 +99,36 @@ $(document).ready(function(){
                 //appends the button to the buttons div including new input
                 $("#buttons").append(newButton);
             }
+        }
+    });
+
+    //BROKEN BUT WHY? MOVE, YOU GIF! MOVE!
+    //adds a click event to categoryImage class elements
+    $(document).on("click", ".categoryImage",
+        function(event){
+
+        console.log("wtf is happening?");
+
+        //creates a variable based on the image's data-state
+        var state = $(this).attr("data-state");
+
+        //if the state is still
+        if (state === "still"){
+
+            //set src to data-animate
+            $(this).attr("src", $(this).attr("data-animate"));
+
+            //sets data-state to animate
+            $(this).attr("data-state","animate");
+
+            //else
+        } else {
+
+            //set src to data-still
+            $(this).attr("src", $(this).attr("data-still"));
+
+            //sets data-state to still
+            $(this).attr("data-state","still");
         }
     })
 });
