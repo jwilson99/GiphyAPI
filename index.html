@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!--page title-->
+    <title>API Practice</title>
+
+    <!--link to external css stylesheet-->
+    <link rel="stylesheet" type="text/css" href="assets/CSS/style.css">
+
+</head>
+
+<body>
+<!--link to external jquery CDN-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+<!--link to external JS-->
+<script type="text/javascript" src="assets/JS/api.js"></script>
+
+<!--gives giphy credit... as required by terms and conditions-->
+<p><a href="https://giphy.com/gifs/season-4-carlton-fresh-prince-r3xkESN1yMqfS"><img id="logo" src="assets/images/giphylogo.gif"> Powered by GIPHY</a></p>
+
+<!--stores the category buttons dynamically created in the JS file-->
+<div id="buttons"></div>
+
+<!--Form element for the user to add buttons-->
+<form>
+    Create your own button:
+    <br>
+    <input type="text" name="userButton" id="userInput">
+    <br>
+    <input type="submit" value="Create Button" id="addButton">
+</form>
+
+<!--contains the gifs dynamically created in the JS file-->
+
+<div id="gifs"></div>
+
+
+</body>
+</html>
