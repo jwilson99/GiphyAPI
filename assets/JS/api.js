@@ -8,7 +8,7 @@ $(document).ready(function(){
     });
 
     //when you click a category button
-    $(".categoryButton").on("click",function(){
+    $(document).on("click",".categoryButton",function(){
 
        //empty the gif div
         $("#gifs").empty();
@@ -84,30 +84,15 @@ $(document).ready(function(){
             //adds the text from the text box to the categories array
             categories.push(userInput);
 
-            //for each item in the categories arrays
-            for (var k = 0; k < categories.length; k++){
-
-                //creates new button
-                var newButton = $("<button>");
-
-                //gives the button a class
-                newButton.addClass("categoryButton");
-
-                //adds text the buttons
-                newButton.text(categories[k]);
-
-                //appends the button to the buttons div including new input
-                $("#buttons").append(newButton);
-            }
+            $(categories).each(function render(k) {
+                $('<input type="button" class=categoryButton value="' + categories[k] +'"/>').appendTo($("#buttons"));
+            });
         }
     });
 
-    //BROKEN BUT WHY? MOVE, YOU GIF! MOVE!
     //adds a click event to categoryImage class elements
     $(document).on("click", ".categoryImage",
         function(event){
-
-        console.log("wtf is happening?");
 
         //creates a variable based on the image's data-state
         var state = $(this).attr("data-state");
