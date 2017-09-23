@@ -7,7 +7,13 @@
     <meta charset="UTF-8">
 
     <!--page title-->
-    <title>API Practice</title>
+    <title>Emotion GIF Generator</title>
+
+    <!--link to reset stylesheet-->
+    <link rel="stylesheet" href="assets/CSS/reset.css">
+
+    <!--link to bootstrap styling CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
     <!--link to external css stylesheet-->
     <link rel="stylesheet" type="text/css" href="assets/CSS/style.css">
@@ -21,24 +27,33 @@
 <!--link to external JS-->
 <script type="text/javascript" src="assets/JS/api.js"></script>
 
-<!--gives giphy credit... as required by terms and conditions-->
-<p><a href="https://giphy.com/gifs/season-4-carlton-fresh-prince-r3xkESN1yMqfS"><img id="logo" src="assets/images/giphylogo.gif"> Powered by GIPHY</a></p>
 
-<!--stores the category buttons dynamically created in the JS file-->
-<div id="buttons"></div>
+<!--Header bar-->
+<header class="container-fluid text-center">
+    <div class="jumbotron">
+        <h1>Emotion GIF Generator</h1>
+        <a href="https://giphy.com/gifs/season-4-carlton-fresh-prince-r3xkESN1yMqfS"><img id="logo" src="assets/images/giphylogo.gif"> Powered by GIPHY</a>
+    </div>
+</header>
 
-<!--Form element for the user to add buttons-->
-<form>
-    Create your own button:
-    <br>
-    <input type="text" name="userButton" id="userInput">
-    <br>
-    <input type="submit" value="Create Button" class="addButton">
-</form>
+<content class="container text-center">
+    <!--stores the category buttons dynamically created in the JS file-->
+    <div id="buttons"></div>
+
+    <!--Form element for the user to add buttons-->
+    <form>
+        Create your own button:
+        <br>
+        <input type="text" name="userButton" id="userInput">
+        <br>
+        <input type="submit" value="Create Button" class="addButton">
+    </form>
+</content>
 
 <!--contains the gifs dynamically created in the JS file-->
 
 <div id="gifs"></div>
+
 
 
 </body>

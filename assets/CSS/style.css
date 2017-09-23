@@ -5,3 +5,26 @@ div {
 #logo {
     width: 50px;
 }
+
+body {
+    background-image: url("../images/regal.png");
+}
+
+#gifs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.categoryImage {
+    padding: 10px;
+}
+
+.gifContain {
+    margin: 5px;
+    font-weight: bold;
+    border: solid 2px lightgray;
+    background-color: rgba(255,255,255,0.5);
+    padding: 10px;
+}

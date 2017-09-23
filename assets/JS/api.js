@@ -29,9 +29,10 @@ $(document).ready(function(){
 
                 //creates a new div
                 var newDiv = $("<div>");
+                newDiv.addClass("gifContain");
 
                 //stores rating data
-                var rating = "Rating: " + response.data[j].rating;
+                var rating = "Rating: " + response.data[j].rating +"<br>";
 
                 //creates a new image element
                 var newImage = $("<img>");
@@ -39,16 +40,17 @@ $(document).ready(function(){
                 //gives the img a src based on response data
                 newImage.attr("src","https://i.giphy.com/media/" + response.data[j].id + "/200_s.gif");
 
-                //gives the image a data-animate attribute
+                //assigns the image various attributes
                 newImage.attr("data-animate","https://i.giphy.com/media/" + response.data[j].id + "/200.gif");
 
-                //gives the image a data-still attribute
                 newImage.attr("data-still","https://i.giphy.com/media/" + response.data[j].id + "/200_s.gif");
 
-                //gives the image a data-state attribute
                 newImage.attr("data-state","still");
 
-                //gives the image a class
+                newImage.attr("title","Click to start or stop this gif!");
+
+                newImage.attr("alt","shows a gif related to the clicked button");
+
                 newImage.addClass("categoryImage");
 
                 //appends rating to newDiv
